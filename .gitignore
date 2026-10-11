@@ -1,0 +1,12 @@
+# Private student records and uploads must never be committed
+data/
+uploads/
+*.db
+*.sqlite
+*.sqlite3
+*.xlsx
+*.csv
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: srijan-otr
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: mkdir -p /var/data/data /var/data/uploads && ln -sfn /var/data/data data && ln -sfn /var/data/uploads uploads && streamlit run app.py --server.address 0.0.0.0 --server.port $PORT
+    disk:
+      name: srijan-otr-data
+      mountPath: /var/data
+      sizeGB: 1
